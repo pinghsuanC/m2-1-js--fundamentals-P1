@@ -5,6 +5,7 @@
 // eg:
 // 0, 1, 4, 9, 16, ...
 
-for (let number = 0; number < 12; number++) {
+for (let number = 1; number < 13; number++) {
+  let square = number**2;
   console.log('the square of ', number, ' is ', square);
 }

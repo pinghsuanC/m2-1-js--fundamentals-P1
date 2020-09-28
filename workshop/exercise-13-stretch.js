@@ -21,3 +21,21 @@
 
 // (Correct answer: 12586269025)
 // (The numbers get big quickly!)
+
+// n: integer, represents nth number in fib sequence
+// n is at least 1. 1th => n=0, 2th => n=1, so the 50th=> n=51
+function fib(n){
+    if(n<=0){
+        return null;    //invalid input
+    }
+    else if(n===1){
+        return 0;       // the 1th fib is 0
+    }else if(n===2){
+        return 1;       // the 2nd fib is 1
+    }else {
+        // The previous number      // The one before previous number
+        return fib(n-1) + fib(n-2);
+    }
+}
+
+console.log(fib(51));           // this is incredibly slow, result is 12586269025
